@@ -18,22 +18,23 @@ class UserLogin{
         cin>>userAttempted;
     // before moving ahead with password lets check if the email exists in the database
         if(userAttempted == username){
-            // move ahead , does nothing for now
+                // move ahead , does nothing for now
+            cout<<"password : \n";
+            cin>>passwordAttempted;
+            if(passwordAttempted == password){
+                cout<<"\nBingo ! You now have access to the files\n";
+                // does smtg like opens a file
+            }
+            else{
+               cout<<"\nOops! Incorrect password\n"; 
+            }
         }
         else{
             cout<<"\nOops! Invalid user id\n"; 
             login();
         }
         
-        cout<<"password : \n";
-        cin>>passwordAttempted;
-        if(passwordAttempted == password){
-            cout<<"\nBingo ! You now have access to the files\n";
-            // does smtg like opens a file
-        }
-        else{
-           cout<<"\nOops! Incorrect password\n"; 
-        }
+        
     }
 };
 int main(){
