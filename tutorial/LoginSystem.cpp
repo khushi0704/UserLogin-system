@@ -91,5 +91,8 @@ int main(){
     UserLogin app;
     app.check_file();
     app.login();
+    char freezing_terminal;
+    cout<<"enter any key to exit "<<endl;
+    cin>>freezing_terminal;
     return 0;  
 }
