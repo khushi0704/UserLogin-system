@@ -59,8 +59,9 @@ class UserLogin{
         // before moving ahead with password lets check if the email exists in the database
         if(userAttempted == username)
         {
+            int user_attempts=5;
             // move ahead , does nothing for now
-            while(!access)
+            while(user_attempts!=0)
             {
             cout<<"password : \n";
             cin>>passwordAttempted;
@@ -72,12 +73,17 @@ class UserLogin{
                     cin>>file_name;
                     //return the file content
                     show_file();
-                    access=true;
+                   // access=true;
                     // does smtg like opens a file
                 }
                 else
                 {
                    cout<<"\nOops! Incorrect password\n"; 
+                }
+                --user_attempts;
+                if(user_attempts==0){
+                    cout<<"sorry you've reached the maximum limit for attempting password "<<endl;
+                    break;
                 }
             }
         }
